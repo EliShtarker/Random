@@ -1,0 +1,6 @@
+space
+right arrow
+left arrow
+backspace
+
+enjoy
