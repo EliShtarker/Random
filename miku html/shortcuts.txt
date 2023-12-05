@@ -1,0 +1,29 @@
+<td><img  class="pixel" src="images/blank.png" alt="blank pixel"></td>
+
+<td><img  class="pixel" src="images/ocean.png" alt="ocean pixel"></td>
+
+<td><img  class="pixel" src="images/sky.png" alt="sky pixel"></td>
+
+<td><img  class="pixel" src="images/brown.png" alt="brown pixel"></td>
+
+<td><img  class="pixel" src="images/blood.png" alt="blood pixel"></td>
+
+<td><img  class="pixel" src="images/red.png" alt="red pixel"></td>
+
+<td><img  class="pixel" src="images/pink.png" alt="pink pixel"></td>
+
+<td><img  class="pixel" src="images/skin.png" alt="skin pixel"></td>
+
+<td><img  class="pixel" src="images/darkSkin.png" alt="darkSkin pixel"></td>
+
+<td><img  class="pixel" src="images/gray.png" alt="gary pixel"></td>
+
+<td><img  class="pixel" src="images/beauBlue.png" alt="beauBlue pixel"></td>
+
+<td><img  class="pixel" src="images/dark.png" alt="dark pixel"></td>
+
+<td><img  class="pixel" src="images/gold.png" alt="gold pixel"></td>
+
+<td><img  class="pixel" src="images/white.png" alt="white pixel"></td>
+
+<td><img  class="pixel" src="images/red2.png" alt="red2 pixel"></td>
