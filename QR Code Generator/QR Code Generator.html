@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator By Eli</title>
+  <style>
+    body {
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #qrcodes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    div {
+      text-align: center;
+    }
+
+
+    input {
+      background-color: black;
+      color: white;
+      border-radius: 15px;
+    }
+
+    label,
+    h3 {
+      font-family: Sans-Serif;
+      font-weight: bold;
+      color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+     
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      border: 1px solidsolid null;
+      border-radius: 15px;
+    }
+
+    h5 {
+      font-family: Arial;
+      color: red;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+      font-size: xx-large;
+    }
+
+    #heb {
+      margin: 0;
+    }
+
+    .eng {
+      margin: 0;
+    }
+
+    .blac {
+      color: black;
+    }
+
+    span {}
+
+    .qr-code {
+}
+
+  </style>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+</head>
+
+<body>
+  <br /><br />
+
+  <div id="inputBtnCon">
+    <h5 id="heb" class="blac">QR Code Generator By Eli</h5>
+    <br /><br />
+<label for="jumpValue">Jump Value:</label>
+<input type="number" id="jumpValue" value="1" placeholder="Enter jump value">
+<br /><br />
+
+    <label for="startValue">Start Value:</label>
+    <input type="number" id="startValue" value="Start counte" placeholder="Enter start number">
+    <br /><br />
+    <label for="endValue">End Value:</label>
+    <input type="number" id="endValue" value="End Counte" placeholder="Enter end number">
+    <br /><br />
+    <label for="qrSize">QR Code Size (px):</label>
+    <input type="number" id="qrSize" value="128" placeholder="Enter QR code width">
+    <br /><br />
+
+    <button onclick="generateQRCodes()">Generate QR Codes</button>
+
+
+    <button onclick="print()">Print QR Codes</button>
+
+  </div>
+  <div id="qrcodes"></div>
+
+  <script>
+    function generateQRCodes() {
+      let startValue = parseInt(document.getElementById('startValue').value);
+      let endValue = parseInt(document.getElementById('endValue').value)
+      let jumpValue = parseInt(document.getElementById('jumpValue').value);;
+      let qrSize = parseInt(document.getElementById('qrSize').value);
+      let qrCodesDiv = document.getElementById('qrcodes');
+      qrCodesDiv.innerHTML = '';
+
+      for (let i = startValue; i <= endValue; i += jumpValue) {
+  let qrCodeDiv = document.createElement('div');
+    qrCodeDiv.classList.add('qr-code');
+
+        let qrCodeHeading = document.createElement('h3');
+        qrCodeHeading.textContent = 'QR Code: ' + i;
+        qrCodeDiv.appendChild(qrCodeHeading);
+
+        
+        let qrCode = new QRCode(qrCodeDiv, {
+          text: i.toString(),
+          width: qrSize,
+          height: qrSize
+        });
+
+        qrCodesDiv.appendChild(qrCodeDiv);
+      }
+    }
+
+
+    document.write("<br/><br/>")
+  </script>
+
+</body>
+
+</html>
